@@ -1,0 +1,23 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Workflow",
+    "fieldname": "enable_field_level_workflow",
+    "label": "Enable Field Level Workflow",
+    "fieldtype": "Check",
+    "insert_after": "is_active",
+    "default": "0",
+    "description": "Enable workflow only when selected fields are changed"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Workflow",
+    "fieldname": "tracked_fields",
+    "label": "Tracked Fields",
+    "fieldtype": "Table",
+    "options": "Workflow Tracked Field",
+    "insert_after": "enable_field_level_workflow",
+    "depends_on": "eval:doc.enable_field_level_workflow==1",
+    "description": "Fields that trigger workflow when changed"
+  }
+]

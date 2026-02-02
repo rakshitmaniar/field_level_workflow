@@ -1,0 +1,80 @@
+{
+  "doctype": "DocType",
+  "name": "Workflow Field Change Log",
+  "module": "Field Level Workflow",
+  "custom": 0,
+  "is_submittable": 0,
+  "editable_grid": 0,
+  "engine": "InnoDB",
+  "track_changes": 0,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "reference_doctype",
+      "fieldtype": "Link",
+      "label": "Reference DocType",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Reference Document",
+      "options": "reference_doctype",
+      "reqd": 1
+    },
+    {
+      "fieldname": "workflow_name",
+      "fieldtype": "Link",
+      "label": "Workflow",
+      "options": "Workflow",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action",
+      "fieldtype": "Data",
+      "label": "Workflow Action",
+      "reqd": 1
+    },
+    {
+      "fieldname": "changed_field",
+      "fieldtype": "Data",
+      "label": "Changed Field",
+      "reqd": 1
+    },
+    {
+      "fieldname": "old_value",
+      "fieldtype": "Long Text",
+      "label": "Old Value"
+    },
+    {
+      "fieldname": "new_value",
+      "fieldtype": "Long Text",
+      "label": "New Value"
+    },
+    {
+      "fieldname": "changed_by",
+      "fieldtype": "Link",
+      "label": "Changed By",
+      "options": "User",
+      "default": "__user",
+      "reqd": 1
+    },
+    {
+      "fieldname": "changed_on",
+      "fieldtype": "Datetime",
+      "label": "Changed On",
+      "default": "now",
+      "reqd": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

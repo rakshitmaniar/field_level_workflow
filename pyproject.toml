@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "field_level_workflow"
+version = "1.0.0"
+description = "Field-level conditional workflow execution for Frappe"
+authors = [{ name = "Techseria Pvt Ltd", email = "niraj@techseria.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+include-package-data = true

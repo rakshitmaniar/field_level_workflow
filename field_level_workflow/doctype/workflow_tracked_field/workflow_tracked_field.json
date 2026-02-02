@@ -1,0 +1,69 @@
+{
+  "doctype": "DocType",
+  "name": "Workflow Tracked Field",
+  "module": "Field Level Workflow",
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "field_order": [
+    "field_name",
+    "field_label",
+    "field_type",
+    "parent_doctype",
+    "column_break_1",
+    "is_child_table_field",
+    "child_table_name",
+    "child_field_name"
+  ],
+  "fields": [
+    {
+      "fieldname": "field_name",
+      "fieldtype": "Data",
+      "label": "Field Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "field_label",
+      "fieldtype": "Data",
+      "label": "Field Label",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "field_type",
+      "fieldtype": "Data",
+      "label": "Field Type",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "parent_doctype",
+      "fieldtype": "Data",
+      "label": "Parent DocType",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_child_table_field",
+      "fieldtype": "Check",
+      "label": "Is Child Table Field",
+      "default": 0
+    },
+    {
+      "fieldname": "child_table_name",
+      "fieldtype": "Data",
+      "label": "Child Table Name",
+      "depends_on": "eval:doc.is_child_table_field==1"
+    },
+    {
+      "fieldname": "child_field_name",
+      "fieldtype": "Data",
+      "label": "Child Field Name",
+      "depends_on": "eval:doc.is_child_table_field==1"
+    }
+  ]
+}
